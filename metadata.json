@@ -1,0 +1,6 @@
+{
+  "name": "HR Analytics and Management System",
+  "description": "Система для відділу персоналу: облік кандидатів, співбесід, стажерів, вакансій, аналітика звільнених та автоматичні звіти в Google Sheets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

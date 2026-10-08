@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Print Styling Rules */
+@media print {
+  /* Hide sidebars, navigation rails, headers, action panels, and buttons */
+  nav,
+  aside,
+  header,
+  button,
+  .no-print,
+  #add-interview-btn,
+  #add-vacancy-btn,
+  #add-intern-btn,
+  .lg\:col-span-1 {
+    display: none !important;
+  }
+
+  /* Make content cover full width of the paper */
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+  }
+
+  .lg\:col-span-2,
+  main,
+  div,
+  section {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    position: static !important;
+    box-shadow: none !important;
+    border-color: #e2e8f0 !important;
+    background-color: transparent !important;
+  }
+
+  /* Ensure grid columns expand nicely */
+  .grid {
+    display: block !important;
+  }
+
+  .grid > * {
+    margin-bottom: 2rem !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Page break rules for structured elements */
+  .page-break {
+    page-break-before: always !important;
+  }
+
+  .avoid-page-break {
+    page-break-inside: avoid !important;
+  }
+
+  /* Keep table rows on the same page when possible */
+  tr {
+    page-break-inside: avoid !important;
+  }
+
+  thead {
+    display: table-header-group !important;
+  }
+
+  /* Text readability improvements on print */
+  h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+    page-break-after: avoid !important;
+  }
+
+  a {
+    text-decoration: underline !important;
+    color: #000000 !important;
+  }
+}
